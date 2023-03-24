@@ -1,0 +1,11 @@
+.myRoundedBTN {
+    border-radius: 50%;
+}
+
+#questionContent, #answerA, #answerB, #answerC, #answerD {
+    min-height: 50px;
+    font-size: 120%;
+    padding: 10px;
+    font-weight: bolder;
+}
+

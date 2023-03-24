@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang= "pl" xmlns:th="http://www.thymeleaf.org">
+<head>  
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Awantura o Milion</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <script th:src="@{/js/jquery-3.5.1.min.js}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/ulg/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+    <script th:src="@{/js/script.js}"></script>
+</head>
+<body class="bg-dark text-light text-center">
+    <div th:include="layout :: navigationPanel"></div>
+    <section class="container">
+        <div class="row text-primary mx-auto pt-4 justify-content-center">
+            <h3>Twój aktualny wynik: &nbsp;</h3>
+            <h3 id="currentResult">0</h3>
+        </div>
+        
+        <button id="drawBTN" class="btn btn-info col-10 col-sm-6 col-xl-3 text-light mt-4" >Wylosuj pytanie</button>
+        
+        <div id="lifebuoys" class="col-sm-8 mx-auto row py-5">
+            <button id="halfByHalfBTN" class="btn btn-success myRoundedBTN col-3 mx-auto" disabled="true">50:50</button>
+            <button id="changeQuestionBTN" class="btn btn-success myRoundedBTN col-3 mx-auto" disabled="true">Zamień</button>
+            <button id="statisticBTN" class="btn btn-success myRoundedBTN col-3 mx-auto" disabled="true">Historia</button>
+        </div>
+        
+        <div id="questionPanel pt-5">
+            <div class="bg-light text-dark col-10 mx-auto" id="questionContent">&nbsp;</div>
+            
+            <div class="row pt-4">
+                <small id="statisticA" class="h5 col-5 text-warning mx-auto"></small><small id="statisticB" class="h5 col-5 text-warning mx-auto"></small>
+                <button id="answerA" class="bg-light text-dark col-5 mx-auto" disabled="true">&nbsp;</button><button id="answerB" class="bg-light text-dark col-5 mx-auto" disabled="true">&nbsp;</button>
+            </div>
+            <div class="row pt-4">
+                <small id="statisticC" class="h5 col-5 text-warning mx-auto"></small><small id="statisticD" class="h5 col-5 text-warning mx-auto"></small>
+                <button id="answerC" class="bg-light text-dark col-5 mx-auto" disabled="true">&nbsp;</button><button id="answerD" class="bg-light text-dark col-5 mx-auto" disabled="true">&nbsp;</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
